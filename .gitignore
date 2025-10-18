@@ -8,3 +8,7 @@ out
 .next/
 node_modules/
 .vercel
+
+.contentlayer/
+.next/
+node_modules/
