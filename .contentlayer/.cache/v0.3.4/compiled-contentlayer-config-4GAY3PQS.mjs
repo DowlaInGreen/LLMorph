@@ -2,7 +2,6 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import remarkGfm from "remark-gfm";
 var Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `pillars/**/*.mdx`,
@@ -10,12 +9,10 @@ var Post = defineDocumentType(() => ({
   fields: {
     title: { type: "string", required: true },
     slug: { type: "string", required: true },
-    // must start with /blog/...
     description: { type: "string", required: true },
     date: { type: "date", required: true },
     pillar: { type: "string", required: true },
     schema_type: { type: "string", required: true },
-    // FAQPage | HowTo
     noindex: { type: "boolean", default: false }
   },
   computedFields: {
@@ -23,13 +20,16 @@ var Post = defineDocumentType(() => ({
   }
 }));
 var contentlayer_config_default = makeSource({
+  disableImportAliasWarning: true,
   contentDirPath: "content",
   documentTypes: [Post],
-  remark: { plugins: [remarkGfm] },
-  rehype: { plugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: "wrap" }]] }
+  mdx: {
+    // Keep rehype only (safe)
+    rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: "wrap" }]]
+  }
 });
 export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-KSGF5H74.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-4GAY3PQS.mjs.map

@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "contentlayer build && next build",
     "start": "next start",
-    "content": "contentlayer build"
+    "content": "contentlayer build",
+    "vercel-build": "contentlayer build && next build"
   },
   "dependencies": {
     "contentlayer": "^0.3.4",
@@ -15,8 +16,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "rehype-autolink-headings": "^7.1.0",
-    "rehype-slug": "^6.0.0",
-    "remark-gfm": "^4.0.1"
+    "rehype-slug": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "24.6.2",
@@ -25,5 +25,8 @@
     "postcss": "8.4.38",
     "tailwindcss": "3.4.9",
     "typescript": "5.5.3"
+  },
+  "engines": {
+    "node": ">=18 <21"
   }
 }
