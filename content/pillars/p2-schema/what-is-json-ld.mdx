@@ -1,0 +1,26 @@
+---
+title: "What Is JSON-LD and How Does It Work?"
+slug: "/blog/schema/what-is-json-ld/"
+description: "JSON-LD is the preferred format for embedding schema.org data."
+date: "2025-10-19"
+pillar: "Pillar 2 – LLM Schema Optimization"
+schema_type: "FAQPage"
+noindex: false
+---
+# What Is JSON-LD and How Does It Work?
+## Short Answer
+JSON-LD lets you declare entities and relations in one block, separate from your HTML layout.
+
+## Expanded
+It stores your structured data as a lightweight JSON object.  
+It doesn’t interfere with visible content, but gives search engines and LLMs full clarity about what each page contains.
+
+### Mini Snippet
+```json
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://ll-morph.vercel.app/#org",
+  "name":"LLMorph",
+  "url":"https://ll-morph.vercel.app"
+}Schema for LLMs | FAQPage How-To | Organization + Person
