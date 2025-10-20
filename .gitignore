@@ -1,4 +1,18 @@
+nano .gitignore# Node / Next
 node_modules
+.next
+.out
+.vercel
+# Contentlayer
+.contentlayer
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
+# Local artifacts
+LLM Morph.html
+LLM Morph_files/
+LLMSwitch.jpgnode_modules
 .next
 out
 .env
