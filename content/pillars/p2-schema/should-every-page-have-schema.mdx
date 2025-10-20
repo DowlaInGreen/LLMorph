@@ -1,0 +1,22 @@
+---
+title: "Should every page have schema?"
+slug: "/blog/schema/should-every-page-have-schema/"
+description: "Prioritize high-signal pages but keep identity schema sitewide."
+date: "2025-10-20"
+pillar: "Pillar 2 – LLM Schema Optimization"
+schema_type: "FAQPage"
+noindex: false
+---
+# Should every page have schema?
+## Short Answer
+Identity schema (Organization, Person) should be universal. Content-specific schema only where relevant.
+
+## Expanded
+Over-markup creates noise. Apply the right type per intent; reuse a stable `@id` instead of duplicating data.
+
+### Practical Example
+```json
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Organization","@id":"https://ll-morph.vercel.app/#org","name":"LLMorph"},
+  {"@type":"WebPage","name":"Services","url":"https://ll-morph.vercel.app/services"}
+]}
