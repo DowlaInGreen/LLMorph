@@ -1,0 +1,30 @@
+title: “What is an entity ID and why is it vital for AI memory?”
+slug: “/blog/schema/what-is-entity-id-and-why-it-matters/”
+description: “Stable @id anchors help LLMs disambiguate brands and people across pages.”
+date: “2025-10-20”
+pillar: “Pillar 2 – LLM Schema Optimization”
+schema_type: “FAQPage”
+noindex: false
+
+What is an entity ID and why is it vital for AI memory?
+
+Short Answer
+
+An @id is a stable, absolute URL that defines an entity’s identity. It lets models merge facts without confusion.
+
+Expanded
+
+Use one @id per entity (e.g., https://yourdomain/#org). Reuse it across pages to connect claims and reduce ambiguity for both search engines and LLMs.
+
+Practical Example
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://ll-morph.vercel.app/#org",
+  "name":"LLMorph",
+  "url":"https://ll-morph.vercel.app"
+}
+FAQ
+
+Do I need sameAs? Add 2–5 authoritative profiles; avoid weak directories.
+Should @id resolve? It can, but doesn’t have to. It must be a stable, absolute URL.
