@@ -1,7 +1,6 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
 import rehypeSlug from "rehype-slug"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
-import remarkGfm from "remark-gfm"
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -23,7 +22,7 @@ export default makeSource({
   contentDirExclude: ["manifest.json"],
   documentTypes: [Post],
   mdx: {
-    remarkPlugins: [remarkGfm],
+    // remarkPlugins: []  // removed remark-gfm (source of crashes)
     rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: "wrap" }]]
   }
 })
