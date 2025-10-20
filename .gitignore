@@ -9,7 +9,7 @@ node_modules
 Thumbs.db
 *.log
 # Local junk
-LLMSwitch.jpg
-SwitchLLM Morph.jpg
-pattern.jpg
-e5ea397a-a9b3-4629-aab2-b4a45c115e20.jpeg
+LLM Morph.html
+LLM Morph_files/
+# Backups
+contentlayer.config.backup.ts
