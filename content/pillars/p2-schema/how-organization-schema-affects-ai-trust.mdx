@@ -1,0 +1,24 @@
+---
+title: "How does Organization schema affect AI trust?"
+slug: "/blog/schema/how-organization-schema-affects-ai-trust/"
+description: "Organization schema stabilizes brand identity that LLMs can cite."
+date: "2025-10-20"
+pillar: "Pillar 2 – LLM Schema Optimization"
+schema_type: "FAQPage"
+noindex: false
+---
+# How does Organization schema affect AI trust?
+## Short Answer
+It declares who publishes claims. With a stable `@id`, models assign higher confidence to your content.
+
+## Expanded
+Link posts to your org via `publisher`/`author` pointing at the org’s `@id`. Add `logo`, `url`, and selective `sameAs` (authoritative only).
+
+### Practical Example
+```json
+{
+  "@context":"https://schema.org",
+  "@type":"BlogPosting",
+  "headline":"Sample",
+  "publisher":{"@id":"https://ll-morph.vercel.app/#org"}
+}
