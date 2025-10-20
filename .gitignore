@@ -1,15 +1,11 @@
-# Build artifacts
 .next
 .contentlayer
 .out
 .vercel
 node_modules
-# OS/editor
 .DS_Store
 Thumbs.db
 *.log
-# Local junk
 LLM Morph.html
 LLM Morph_files/
-# Backups
 contentlayer.config.backup.ts
