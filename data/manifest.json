@@ -1,0 +1,12 @@
+{
+  "pages": [
+    {"path": "/services", "title": "Services: LLM Visibility", "type": "page"},
+    {"path": "/cases", "title": "Case Studies", "type": "page"},
+    {"path": "/about", "title": "About LLMorph", "type": "page"},
+    {"path": "/contact", "title": "Contact", "type": "page"}
+  ],
+  "posts": [
+    {"slug": "what-is-schema-for-llms", "title": "What Is Schema Markup and Why It Matters for LLMs?", "pillar": "Pillar 2 – LLM Schema Optimization"},
+    {"slug": "how-to-implement-faqpage-and-howto", "title": "How to implement FAQPage and HowTo properly", "pillar": "Pillar 2 – LLM Schema Optimization"}
+  ]
+}

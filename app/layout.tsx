@@ -1,21 +1,18 @@
-import "./../styles/globals.css";
-import type { Metadata } from "next";
-import { Montserrat, Notable } from "next/font/google";
+import "./globals.css"
+import SiteHeader from "../components/site-header"
 
-const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
-const notable = Notable({ subsets: ["latin"], weight: "400", variable: "--font-notable" });
-
-export const metadata: Metadata = {
-  title: { default: "LLMorph", template: "%s | LLMorph" },
+export const metadata = {
+  title: "LLMorph — LLM Visibility Service",
   description: "GEO-first web builds: structured, fast, LLM-visible."
-};
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${notable.variable}`}>
-      <body className="bg-brand-background text-brand-text font-body antialiased">
+    <html lang="en">
+      <body style={{fontFamily:"system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif", color:"#0a0a0a", background:"#ffffff"}}>
+        <SiteHeader />
         {children}
       </body>
     </html>
-  );
+  )
 }
