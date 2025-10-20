@@ -1,0 +1,21 @@
+---
+title: "How to implement FAQPage and HowTo properly"
+slug: "/blog/schema/how-to-implement-faqpage-and-howto/"
+description: "Minimal, correct FAQPage and HowTo schema patterns that LLMs parse reliably."
+date: "2025-10-20"
+pillar: "Pillar 2 – LLM Schema Optimization"
+schema_type: "HowTo"
+noindex: false
+---
+# How to implement FAQPage and HowTo properly
+## Short Answer
+One intent per page, 3–6 concise Q&As for FAQPage; sequential, outcome-driven steps for HowTo.
+
+## Expanded
+Keep answers short (1–3 sentences). Use absolute URLs. Avoid mixing multiple schema types unless using a graph.
+
+### Practical Example
+```json
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What is LLM visibility?","acceptedAnswer":{"@type":"Answer","text":"Making brands recognizable inside AI answers."}}
+]}

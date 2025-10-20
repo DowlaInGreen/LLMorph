@@ -1,0 +1,22 @@
+---
+title: "Which schema types improve LLM visibility most?"
+slug: "/blog/schema/which-schema-types-improve-llm-visibility/"
+description: "Priority schema types that help LLMs anchor entities and answers."
+date: "2025-10-20"
+pillar: "Pillar 2 – LLM Schema Optimization"
+schema_type: "FAQPage"
+noindex: false
+---
+# Which schema types improve LLM visibility most?
+## Short Answer
+Prioritize Organization, Person, FAQPage, HowTo, BlogPosting, and BreadcrumbList. They establish identity, intent, and relationships.
+
+## Expanded
+- **Organization/Person** → who you are.
+- **FAQPage/HowTo** → question–answer and step intent.
+- **BlogPosting/Article** → topical authority tied to your org.
+- **BreadcrumbList** → hierarchy and cluster context.
+
+### Practical Example
+```json
+{"@context":"https://schema.org","@type":"Organization","@id":"https://ll-morph.vercel.app/#org","name":"LLMorph"}
